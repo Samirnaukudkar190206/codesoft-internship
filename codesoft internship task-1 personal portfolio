@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samir Uttam Naukudkar's portfolio showcasing web development skills and projects.">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        div {
+            padding: 20px;
+            margin: 20px;
+            background-color: whitesmoke;
+        }
+
+        #about img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        ul {
+            padding: 0;
+           
+        }
+
+       
+
+        .project {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px auto;
+            width: 80%;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: left;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="message"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>Samir Uttam Naukudkar</h1>
+    </header>
+
+    <div id="About">
+        <h2>About Me</h2>
+      
+        <p>I am a passionate web developer with less than a year of experience in creating dynamic and responsive websites. Proficient in HTML, CSS, and JavaScript, I specialize in front-end development, ensuring seamless user experiences across various devices. My expertise extends to popular frameworks such as React and Vue.js, allowing me to build interactive applications that engage users effectively.</p>
+    </div>
+
+    <div id="skills">
+        <h2>Skills</h2>
+       <p>HTML <br>CSS <br>JavaScript <br>Tailwind CSS <br>Python</p>
+    </div>
+
+    <div id="Projects">
+        <h2>Projects</h2>
+        <div class="Project">
+            <h3>To-Do List</h3>
+           <p>Task Management: Allows users to add, edit, delete, and mark tasks as completed <br>
+User Interface: Simple and effective design for managing daily activities. <br>
+Technology Used: Built with HTML, CSS, and JavaScript. <br>
+Purpose: Demonstrates core web development concepts and practices.</p>
+
+
+
+           
+            <a href="https://github.com/Samirnaukudkar190206/codesoft-internship/blob/376fe7c47f2b05884f13a5c302c227fd6639dde4/TO%20DO%20List%20using%20html/css/js">Go To Link</a><br>
+            <h3>Calculator</h3>
+            <p>Simple & Functional Tool: Performs basic arithmetic operations (addition, subtraction, multiplication, division).<br>
+                User Interface: Clean and intuitive design for easy number and operator input.<br>
+                Technology Used: Built with HTML, CSS, and JavaScript.<br>
+                Purpose: Demonstrates basic web development skills.<br>
+            </p>
+            <a href="https://github.com/Samirnaukudkar190206/codesoft-internship/blob/f00b3f342c86d2f9fd46d6a7c974fe842c375fac/Calculator">Go To Link</a>
+        </div>
+    </div>
+
+    <div id="Resume">
+        <h2>Resume</h2>
+        <a href="https://www.dropbox.com/scl/fi/3iut6mkyvvom44kuh0md0/Samir_Resume_466-1.pdf?rlkey=5anoa1q07df1jrbg31uwalrco&st=uq7grgak&dl=0" download>Download My Resume</a>
+    </div>
+
+    <div id="contact-me">
+        <h2>Contact Me</h2>
+       
+        <h4>LinkedIn: <a href="https://www.linkedin.com/in/samir-naukudkar-a10129219
+" click here>click here</a></h4>
+<h4>GitHub: <a href="https://github.com/Samirnaukudkar190206" click here>click here
+</a></h4>
+<h4>E-mailId: <a href="mailto:samiruttamanaukudkar190206@gmail.com" click here>click here</a>
+</h4>
+        <form action="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your Name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your message here"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Samir Uttam Naukudkar. All rights reserved.</p>
+    </footer>
+     <script>
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+           
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+           
+            if (name && email && message) {
+               
+                console.log('Form submitted:', { name, email, message });
+                alert('Thank you for your message!');
+                form.reset(); // Clear the form
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
+
