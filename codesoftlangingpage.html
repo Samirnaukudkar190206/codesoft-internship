@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>educare study abroad consultancy</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav .logo h1 {
+    font-size: 1.8rem;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+.hero {
+    background-color: #f8f8f8;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+
+.services {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    display: inline-block;
+    width: 30%;
+    background-color: #eaeaea;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+.countries {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #eaeaea;
+}
+
+.countries h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.country-card {
+    display: inline-block;
+    width: 30%;
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.country-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.country-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+.contact {
+    background-color: #f8f8f8;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact form button:hover {
+    background-color: #218838;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+    <div class="logo">
+        <h1>EduCare Study Abroad Consultancy</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="codesoftlangingpage.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+    </nav>
+</header>
+
+ <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Start Your Journey to Study Abroad</h1>
+            <p>Your path to global education begins here. Explore study abroad opportunities today!</p>
+            <button onclick="scrollToServices()">Explore Services</button>
+        </div>
+    </section>
+     <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3>University Applications</h3>
+            <p>Get expert guidance for your application process to top universities worldwide. We assist you with everything from document preparation to submission, ensuring your application stands out.</p>
+        </div>
+        <div class="service-card">
+            <h3>Visa Assistance</h3>
+            <p>We guide you through every step of the visa application process. Our team ensures that you have all the required documents, understand the interview process, and submit your application smoothly.</p>
+        </div>
+        <div class="service-card">
+            <h3>Career Counseling</h3>
+            <p>Our experienced counselors help you make informed decisions about which program and country best match your career aspirations. We also assist with post-graduation work options.</p>
+        </div>
+    </section>
+     <section class="countries" id="countries">
+        <h2>Top Study Abroad Destinations</h2>
+        <p>We have partnerships with universities across the globe. Explore these top study abroad destinations:</p>
+        <div class="country-card">
+            <h3>United States</h3>
+            <p>The United States offers diverse academic programs and cutting-edge research opportunities. It's one of the most popular destinations for international students.</p>
+        </div>
+        <div class="country-card">
+            <h3>United Kingdom</h3>
+            <p>The UK boasts some of the world’s best universities and colleges. It's known for its rich culture and world-class education.</p>
+        </div>
+        <div class="country-card">
+            <h3>Canada</h3>
+            <p>With a welcoming culture, Canada is home to some of the world’s most highly ranked universities. It's an ideal destination for international students looking to study in English or French.</p>
+        </div>
+    </section>
+     <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+ <footer>
+        <p>&copy; 2025 EduCare Study Abroad Consultancy. All rights reserved.</p>
+    </footer>
+
+    <script >
+        function scrollToServices() {
+  document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+}
+
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Thank you for reaching out! We will get back to you soon.");
+  });
+    </script>
+
+
+
+    
+</body>
+</html>
