@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Website Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .sidebar .draggable {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f0f0f0;
+            cursor: grab;
+        }
+        .canvas {
+            flex-grow: 1;
+            min-height: 400px;
+            border: 2px dashed #ccc;
+            padding: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="draggable" draggable="true">Text</div>
+        <div class="draggable" draggable="true">Image</div>
+        <div class="draggable" draggable="true">Button</div>
+    </div>
+    <div class="canvas" id="dropzone">Drop elements here</div><script>
+    const draggables = document.querySelectorAll('.draggable');
+    const dropzone = document.getElementById('dropzone');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', draggable.textContent);
+        });
+    });
+
+    dropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData('text/plain');
+        let newElement;
+        
+        if (data === 'Text') {
+            newElement = document.createElement('p');
+            newElement.textContent = 'Editable Text';
+        } else if (data === 'Image') {
+            newElement = document.createElement('img');
+            newElement.src = 'https://via.placeholder.com/100';
+            newElement.style.width = '100px';
+        } else if (data === 'Button') {
+            newElement = document.createElement('button');
+            newElement.textContent = 'Click Me';
+        }
+        
+        if (newElement) {
+            newElement.style.position = 'absolute';
+            newElement.style.left = `${e.clientX - dropzone.offsetLeft}px`;
+            newElement.style.top = `${e.clientY - dropzone.offsetTop}px`;
+            dropzone.appendChild(newElement);
+        }
+    });
+</script>
+
+</body>
+</html>
